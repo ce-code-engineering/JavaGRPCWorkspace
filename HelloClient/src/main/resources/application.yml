@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: hello-client
+
+grpc:
+  client:
+    hello-service:
+      address: 'static://localhost:8080'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
