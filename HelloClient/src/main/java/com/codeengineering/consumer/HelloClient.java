@@ -23,7 +23,6 @@ public class HelloClient {
             .greetings(HelloRequest.newBuilder().setMessage("Hi I am a Client").build());
         System.out.println("From server 02: " + response.getMessage());
     }
-
     private static HelloServiceGrpc.HelloServiceBlockingStub newBlockingStub(final ManagedChannel channel) {
         return HelloServiceGrpc.newBlockingStub(channel).withDeadlineAfter(3000, TimeUnit.MILLISECONDS);
     }
