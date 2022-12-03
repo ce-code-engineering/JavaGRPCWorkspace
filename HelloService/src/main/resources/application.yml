@@ -1,0 +1,10 @@
+server:
+  port: 58080
+
+spring:
+  application:
+    name: hello-server
+
+grpc:
+  server:
+    port: 8080
