@@ -1,0 +1,7 @@
+grpc:
+  client:
+    hello-service:
+      address: 'dns:///hello-service:8080'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

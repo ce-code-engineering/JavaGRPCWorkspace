@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  hello-service:
+    build: ../HelloService
+    networks:
+      - local
+    ports:
+      - '8080:8080'
+  hello-client:
+    build: ../HelloClient
+    networks:
+      - local
+    ports:
+      - '8081:8081'
+    links:
+      - hello-service
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+networks:
+  local:
+    driver: bridge
