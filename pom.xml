@@ -12,6 +12,7 @@
         <module>HelloProtoModel</module>
         <module>HelloService</module>
         <module>HelloClient</module>
+        <module>HelloCDK</module>
     </modules>
 
     <properties>
